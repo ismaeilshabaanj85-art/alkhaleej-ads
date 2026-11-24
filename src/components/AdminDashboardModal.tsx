@@ -218,10 +218,29 @@ export function AdminDashboardModal({
     }
   };
 
-  const promoSlides =
-    campaign && campaign.promoSlides.length > 0
-      ? campaign.promoSlides
-      : DEFAULT_PROMO_SLIDES;
+    const promoSlides = campaign
+    ? [
+        {
+          badge: 'إعلان الخليج الذكي ⚡',
+          headline: promoAngle || 'توفير آلاف الريالات في ثوانٍ',
+          subtext: campaign.videoScript?.split('\n')[0]?.replace(/[*#]/g, '').slice(0, 65) || 'اصنع إعلانك وبوسترك وفيديو متجرك بضغطة زر',
+          priceTag: 'جرّب مجاناً الآن',
+        },
+        {
+          badge: 'لأصحاب متاجر سلة وزد 🇸🇦🇦🇪',
+          headline: campaign.tweets?.[0]?.slice(0, 55) || 'إعلانات خليجية مقنعة ترفع مبيعاتك',
+          subtext: 'وصف SEO + نص خليجي + تصميم جاهز للنشر فوراً',
+          priceTag: 'بدون خبرة تصميم',
+        },
+        {
+          badge: 'ابدأ حملتك الآن 🚀',
+          headline: 'صمّم إعلانك الأول مجاناً',
+          subtext: 'أدخل اسم منتجك وسعره واستلم حملتك الكاملة في 10 ثوانٍ',
+          priceTag: 'الرابط في البايو 👇',
+        },
+      ]
+    : DEFAULT_PROMO_SLIDES;
+
 
   return (
     <div
