@@ -1,0 +1,6 @@
+{
+  "name": "إعلان الخليج الذكي - Smart Gulf Ads",
+  "description": "منصة الذكاء الاصطناعي الأولى لصناعة الحملات الإعلانية، البوسترات الفاخرة، والفيديوهات التسويقية لتجار الخليج العربي.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
